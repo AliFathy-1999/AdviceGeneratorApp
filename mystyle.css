@@ -6,13 +6,14 @@ body{
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top:15%;
+    margin-top:5%;
 }
 .Card{
     background-color: hsl(217, 19%, 24%);
     width: 40%;
     border-radius: 0.5em;
     box-shadow: 2px 2px #000;
+    
 }
 .Text{
     color:hsl(150, 100%, 66%);
@@ -27,6 +28,7 @@ body{
 }
 #imageHr{
     margin-bottom: 10%;
+    max-width: 100%;
 }
 #Generatebutton{
     padding: 1vw;
@@ -34,6 +36,26 @@ body{
     border-radius: 60%;
     border: 0;
     display: flex;
-    align-items: center;
-    
+    margin-left: 47%;
+    cursor:pointer;
+    position: relative;
+    top:5%;
 }
+#Generatebutton:hover{
+    filter: brightness(200%);
+}
+@media only screen and (max-width: 375px) {
+    .Card{
+        height: 100%;
+        width:100%;
+        box-sizing: border-box;
+    }
+    #Generatebutton{
+        padding: 3vw;
+        position: relative;
+        top:15%;
+    }
+    #AdviceText{
+        font-size:5vw;
+    }
+  }
