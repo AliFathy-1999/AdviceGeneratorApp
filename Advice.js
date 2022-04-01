@@ -1,9 +1,13 @@
 
 let spanCount = document.getElementById("AdviceNo"); 
-function Count(){
-    let count = 0;
-        count++;
-        spanCount.innerHTML = count;
-    
+let spanAdvice = document.getElementById("AdviceText"); 
+const apiURL="https://api.adviceslip.com/advice";
+let count =0;
+async function getAdvice(){
+    const response = await fetch(apiURL);
+    const data =  await response.json();
+    spanAdvice.innerHTML=data.slip.advice;
+    count++;
+    spanCount.innerHTML=count;
 }
-Count();
+getAdvice();
