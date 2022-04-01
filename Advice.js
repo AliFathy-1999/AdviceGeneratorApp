@@ -10,4 +10,3 @@ async function getAdvice(){
     count++;
     spanCount.innerHTML=count;
 }
-getAdvice();
